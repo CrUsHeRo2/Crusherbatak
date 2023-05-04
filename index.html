@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Task1</title>
+   
+<body>
+    <div id="calculator">
+    <h1>Code Crusher Calculator</h1>
+	<label for="num1">Number 1:</label>
+	<input type="number" id="num1"><br>
+	<label for="num2">Number 2:</label>
+	<input type="number" id="num2"><br>
+	<label for="result">Result:</label>
+	<input type="number" id="result" disabled><br>
+	<button onclick="add()">Addition</button>
+	<button onclick="subtract()">Subtraction</button>
+	<button onclick="multiply()">Multiplication</button>
+	<button onclick="divide()">Division</button>
+	<button onclick="clearInput()">Clear</button>
+	<button onclick="about()">About</button>
+    </div>
+
+	<script>
+		function add() {
+			let num1 = parseInt(document.getElementById("num1").value);
+			let num2 = parseInt(document.getElementById("num2").value);
+			let result = num1 + num2;
+			document.getElementById("result").value = result;
+		}
+		function subtract() {
+			let num1 = parseInt(document.getElementById("num1").value);
+			let num2 = parseInt(document.getElementById("num2").value);
+			let result = num1 - num2;
+			document.getElementById("result").value = result;
+		}
+		function multiply() {
+			let num1 = parseInt(document.getElementById("num1").value);
+			let num2 = parseInt(document.getElementById("num2").value);
+			let result = num1 * num2;
+			document.getElementById("result").value = result;
+		}
+		function divide() {
+			let num1 = parseInt(document.getElementById("num1").value);
+			let num2 = parseInt(document.getElementById("num2").value);
+			let result = num1 / num2;
+			document.getElementById("result").value = result;
+		}
+		function clearInput() {
+			document.getElementById("num1").value = "";
+			document.getElementById("num2").value = "";
+			document.getElementById("result").value = "";
+		}
+		function about() {
+			alert("Cirlo Miranda");
+		}
+	</script>
+</body>
+</html>
